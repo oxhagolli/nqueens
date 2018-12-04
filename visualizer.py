@@ -20,6 +20,7 @@ def draw(config):
     """
     image = Image.open("queen.png").resize((queens - 2, queens-2), Image.ANTIALIAS)
     for row, i in enumerate(config):
+        row = len(config) - row - 1
         for col, j in enumerate(i):
             if j is 1:
                 plt.imshow(image, extent=(col*queens, col*queens + queens -2, row*queens, row*queens + queens - 2))
@@ -33,4 +34,4 @@ def draw_grid(size, color="blue"):
         plt.plot([0, size*queens], [i*queens, i*queens], color=color)
 
 
-draw([[1, 0, 1], [0, 1, 0], [1, 0, 1]])
+draw([[0, 0, 0], [0, 0, 0], [0, 0, 1]])
