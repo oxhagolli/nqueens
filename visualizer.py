@@ -6,7 +6,6 @@
 """
 from PIL import Image
 
-import numpy as np
 import matplotlib.pyplot as plt
 
 queens = 64
@@ -33,5 +32,3 @@ def draw_grid(size, color="blue"):
         plt.plot([i*queens, i*queens], [0, size*queens], color=color)
         plt.plot([0, size*queens], [i*queens, i*queens], color=color)
 
-
-draw([[0, 0, 0], [0, 0, 0], [0, 0, 1]])
